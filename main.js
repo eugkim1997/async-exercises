@@ -1,111 +1,15 @@
-const getNumLessThanTen = require('./getNumLessThan.js'); 
+const getNumLessThanTen = require('./getNumLessThan.js');
 const waitOneSecond = require('./waitOneSecond');
 const writeToFile = require('./writeToFile');
 
 
-// getNumLessThanTen((error, success) => {
-//   if (error) {
-//     console.log('that shouldnot be right');
-//   } else {
-//     console.log(success);
-//   }
-// });
-
-// getNumLessThanTen((error, success) => {
-//   if (error) {
-//     console.log('that shouldnot be right');
-//   } else {
-//     waitOneSecond((error, success) => {
-//       if (error) {
-//         console.log('oh no');
-//       } else {
-//         console.log(success);
-//       }
-//     });
-//   }
-// });
-
-// waitOneSecond((error, success)=>{
-//   if (error) {
-//     console.log('what went wrong? 1')
-//   } else {   
-//     console.log(success)
-//     waitOneSecond((error, success)=> {
-//       if (error) {
-//         console.log('what went wrong? 2')
-//       } else {
-//         console.log(success);
-//         waitOneSecond((error, success) => {
-//           if (error) {
-//             console.log('uh oh you are on the inside');
-//           } else {
-//             console.log(success);
-//             getNumLessThanTen((error, success) => {
-//               if (error) {
-//                 console.log('something is going on');
-//               } else {
-//                 console.log('here is the random number ', success);
-//                 writeToFile(success, (suc) => {
-//                   if (suc) {
-//                     console.log(suc);
-//                   }
-//                 })
-//               }
-//             })
-//           }
-//         })
-//     }
-//     })
-//   }
-// });
-
-waitOneSecond((error, success) => {
-  if (error) {
-    console.log('ruh-roh');
-  } else {
-    console.log(success);
-    waitOneSecond((error, success) => {
-      if (error) {
-        console.log('uh-oh');
-      } else {
-        console.log(success);
-        waitOneSecond((error, success) => {
-          if (error) {
-            console.log(error)
-          } else {
-            console.log(success);
-            console.log('getting number now')
-            getNumLessThanTen((error, success) => {
-              if (error) {
-                console.log(error);
-              } else {
-                console.log('number received! it is ' + success);
-                writeToFile(success, (suc, err) => {
-                  if (err) {
-                    console.log('so close!');
-                  } else {
-                    console.log(suc);
-                  }
-                })
-              }
-            })
-          }
-        })
-      }
-    })
-  }
-})
 
 /*
 get a random number less than 10,
-wait three seconds
-write the number to the hard drive
+then, wait three seconds
+then, write the number to the hard drive
 Then, once all that is done, console log "I'm done!"
-
 CONSTRAINTS
-- No using setTimeout (must use waitOneSecond)
-- No editing any file except main.js
+- You must use "getNumLessThan.js" to generate your random number. Note: the "getNumLessThan.js" file is just an overly complicated way to make getting a random number asynchronous (there is no reason for it to be asynchronous, other than as an exercise).
+- No editing any file except main.js (comments are the exception)
 */
-
-
-
