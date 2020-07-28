@@ -3,13 +3,11 @@ const generateRandomNum = (num) => {
 }
 
 const generateRandomDelay = () => {
-  // return generateRandomNum(10) * 500;
-  return 2000;
+  return generateRandomNum(10) * 500;
 }
-// callback(err, num)
+
 const getNumLessThanTen = (callback) => {
   const randomDelay = generateRandomDelay();
-  
   setTimeout(() => {
     const randNum = generateRandomNum(10);
     callback(null, randNum);
