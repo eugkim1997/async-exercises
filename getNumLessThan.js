@@ -14,7 +14,4 @@ const getNumLessThanTen = (callback) => {
   }, randomDelay);
 };
 
-
-// module.exports.getNumLessThanTen = getNumLessThanTen;
 module.exports = getNumLessThanTen;
-

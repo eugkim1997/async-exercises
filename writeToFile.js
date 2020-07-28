@@ -11,4 +11,3 @@ const writeToFile = (data, callback) => {
 };
 
 module.exports = writeToFile;
-

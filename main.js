@@ -1,4 +1,3 @@
-
 /*
 get a random number less than 10,
 then, wait three seconds
