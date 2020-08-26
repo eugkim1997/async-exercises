@@ -1,6 +1,6 @@
 const waitOneSecond = (randNum, callback) => {
   setTimeout(() => {
-    callback(null, 'waited one second!');
+    callback(null, randNum);
   }, 1000)
 }
 

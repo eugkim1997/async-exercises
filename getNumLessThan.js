@@ -8,6 +8,7 @@ const generateRandomDelay = () => {
 
 const getNumLessThanTen = (callback) => {
   const randomDelay = generateRandomDelay();
+  // console.log(randomDelay);
   setTimeout(() => {
     const randNum = generateRandomNum(10);
     callback(null, randNum);

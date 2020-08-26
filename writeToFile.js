@@ -10,4 +10,16 @@ const writeToFile = (data, callback) => {
   });
 };
 
+const asyncWriteToFile = (data) => {
+  return new Promise((resolve, reject) => {
+    WriteToFile(data, (err, res) => {
+      if (err) => {
+        reject(err);
+      } else {
+        resolve(res);
+      }
+    })
+  })
+}
+
 module.exports = writeToFile;
