@@ -13,7 +13,7 @@ const writeToFile = (data, callback) => {
 const asyncWriteToFile = (data) => {
   return new Promise((resolve, reject) => {
     WriteToFile(data, (err, res) => {
-      if (err) => {
+      if (err) {
         reject(err);
       } else {
         resolve(res);

@@ -3,5 +3,4 @@ const waitOneSecond = (randNum, callback) => {
     callback(null, randNum);
   }, 1000)
 }
-
 module.exports = waitOneSecond;
